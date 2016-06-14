@@ -1,0 +1,11 @@
+.game-content{
+    position: relative;
+    width: 600px;
+    height: 600px; 
+}
+
+.score{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+}

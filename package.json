@@ -5,11 +5,11 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --content-base src --inline --hot --port 8091",
+    "dev": "webpack-dev-server --content-base ./ --inline --hot --port 8091",
     "watch": "webpack --watch"
   },
   "keywords": [
-    "timeline"
+    "snake"
   ],
   "author": "Sherry Li",
   "license": "MIT",
