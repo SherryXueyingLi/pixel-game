@@ -5,12 +5,13 @@ import {Router, Route, IndexRoute, hashHistory, Link} from "react-router";
 
 import Layout from "./Layout";
 import SnameGame from "./Routes/SnakeGame";
+import OthelloGame from "./Routes/OthelloGame";
 
 ReactDOM.render(
     <Router history ={hashHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={SnameGame}></IndexRoute>
-            
+            <Route path="othello" name="othello" component={OthelloGame}></Route>
             
         </Route>
     </Router>, 
