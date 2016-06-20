@@ -1,5 +1,9 @@
 import React from "react";
-import SubsetII from "../Leetcode/Nity";
+import SubsetII from "../Leetcode/90";
+import DecodeWays from "../Leetcode/91";
+import ReverseListII from "../Leetcode/92";
+import RestoreIPAddresses from "../Leetcode/93";
+import BinaryTreeInorder from "../Leetcode/94";
 
 export default class Leetcode extends React.Component{
     constructor(){
@@ -16,19 +20,22 @@ export default class Leetcode extends React.Component{
 
                 There's the start of this page.<br/></pre>
                 <div>
-                <div class="list-group" style={{position: "fixed"}}>
+                <div class="list-group" style={{position: "fixed", left:"5%"}}>
                     <a href="#main" class="list-group-item active">
                         Leetcode Subjects
                     </a>
-                    <a href="#nity" class="list-group-item">90 Subset II
-                    </a>
-                    <a href="#" class="list-group-item">Morbi leo risus
-                    </a>
+                    <a href="#leetcode/90" class="list-group-item">90 Subset II</a>
+                    <a href="#leetcode/91" class="list-group-item">91 Decode Ways</a>
+                    <a href="#leetcode/92" class="list-group-item">92 Reverse Node List II</a>
+                    <a href="#leetcode/93" class="list-group-item">93 Restore IP Addresses</a>
+                    <a href="#leetcode/93" class="list-group-item">94. Binary Tree Inorder Traversal</a>
                     </div>
                 </div>
-                <div id="nity" >
-                    <SubsetII ></SubsetII>
-                </div>
+                    <SubsetII id="leetcode/90" ></SubsetII>
+                    <DecodeWays id="leetcode/91"/>
+                    <ReverseListII id="leetcode/92"/>
+                    <RestoreIPAddresses id="leetcode/93" />
+                    <BinaryTreeInorder id="leetcode/93" />
             </div>
         )
     }

@@ -13,7 +13,7 @@ ReactDOM.render(
         <Route path="/" component={Layout}>
             <IndexRoute component={SnameGame}></IndexRoute>
             <Route path="othello" name="othello" component={OthelloGame}></Route>
-            <Route path="leetcode" name="leetcode" component={Leetcode}></Route>
+            <Route path="leetcode(/:subjects)" name="leetcode" component={Leetcode}></Route>
         </Route>
     </Router>, 
 

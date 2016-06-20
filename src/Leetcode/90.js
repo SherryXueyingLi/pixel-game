@@ -43,24 +43,24 @@ export default class SubsetII extends React.Component{
     constructor(){
         super();
         this.state = {code: `var subsetsWithDup = function(nums) {
-                        var count = 1, rt = [[]];
-                        nums.sort();
-                        for(let i=0; i<nums.length; i=i+count){
-                            count = 1;
-                            while(nums[i]===nums[i+count]) count++;
-                            let toadd = [];
-                            for(let j in rt){
-                                let temp = rt[j].concat();
-                                for(let c=0; c<count; c++){
-                                    temp.push(nums[i]);
-                                    toadd.push(temp.concat());
-                                }
-                            }
-                            rt = rt.concat(toadd);
-                        }
-                        return rt;
-                        
-                    };`,
+    var count = 1, rt = [[]];
+    nums.sort();
+    for(let i=0; i<nums.length; i=i+count){
+        count = 1;
+        while(nums[i]===nums[i+count]) count++;
+        let toadd = [];
+        for(let j in rt){
+            let temp = rt[j].concat();
+            for(let c=0; c<count; c++){
+                temp.push(nums[i]);
+                toadd.push(temp.concat());
+            }
+        }
+        rt = rt.concat(toadd);
+    }
+    return rt;
+
+    };`,
                 explain: ''}
     }
 
@@ -68,8 +68,7 @@ export default class SubsetII extends React.Component{
         const {code, explain} = this.state;
         return (
             <div>
-                <Template code={code}></Template>
-                
+                <Template code={code} title="90. SubSet II" id={this.props.id}></Template>
             </div>
         )
     }

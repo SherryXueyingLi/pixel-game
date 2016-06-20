@@ -17,7 +17,7 @@ export default class navigationBar extends React.Component {
         const {collapsed} = this.state;
         const snakeClass = location.pathname === "/" ? "active":"";
         const othelloClass = location.pathname === "/othello" ? "active":"";
-        const leetcodeClass = location.pathname === "/leetcode" ? "active":"";
+        const leetcodeClass = location.pathname.match(/^\/leetcode/) ? "active" : "";;
         const navClass = collapsed ? "collapsed" : "";
 
         return (
@@ -37,10 +37,10 @@ export default class navigationBar extends React.Component {
                             <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Snake</IndexLink>
                         </li>
                         <li class={othelloClass}>
-                            <Link to="/othello" onClick={this.toggleCollapse.bind(this)}>Othello</Link>
+                            <Link to="othello" onClick={this.toggleCollapse.bind(this)}>Othello</Link>
                         </li>
                         <li class={leetcodeClass}>
-                            <Link to="/leetcode" onClick={this.toggleCollapse.bind(this)}>Leetcode</Link>
+                            <Link to="leetcode" onClick={this.toggleCollapse.bind(this)}>Leetcode</Link>
                         </li>
                     </ul>
                 </div>
