@@ -12,7 +12,7 @@
 // Note: Recursive solution is trivial, could you do it iteratively?
 
 import React from "react";
-import Template from "../Leetcode/Template";
+import Template from "./Template";
 
 /**
  * @param {TreeNode} root

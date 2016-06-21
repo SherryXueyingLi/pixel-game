@@ -14,7 +14,7 @@
 //   []
 // ]
 import React from "react";
-import Template from "../Leetcode/Template";
+import Template from "./Template";
 /**
  * @param {number[]} nums
  * @return {number[][]}

@@ -10,7 +10,7 @@
 // 1 ≤ m ≤ n ≤ length of list.
 import ListNode from "./ListNode";
 import React from "react";
-import Template from "../Leetcode/Template";
+import Template from "./Template";
 
 
 /**
