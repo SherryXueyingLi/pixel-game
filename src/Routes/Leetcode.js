@@ -4,6 +4,8 @@ import DecodeWays from "../Leetcode/91";
 import ReverseListII from "../Leetcode/92";
 import RestoreIPAddresses from "../Leetcode/93";
 import BinaryTreeInorder from "../Leetcode/94";
+import UniqueTreesII from "../Leetcode/95";
+import UniqueTrees from "../Leetcode/96";
 
 export default class Leetcode extends React.Component{
     constructor(){
@@ -11,6 +13,20 @@ export default class Leetcode extends React.Component{
     }
 
     render(){
+        const subjects = {
+            90: "Subset II",
+            91: "Decode Ways",
+            92: "Reverse Node List II",
+            93: "Restore IP Addresses",
+            94:"Binary Tree Inorder Traversal",
+            95: "Unique Binary Search Trees II",
+            96: "Unique Binary Search Trees"
+        };
+        const indexes = Object.keys(subjects).map((key) =>{
+                           return (
+                               <a href={"#leetcode/"+key} class="list-group-item" key={key}>{key} {subjects[key]}</a>
+                           );
+                       })
         return (
             <div>
                 <pre id="main">The story is, one day I open my leetcode page, planning to review my past codes, and found that leetcode is not actually saving any code for me.<br/>
@@ -24,18 +40,16 @@ export default class Leetcode extends React.Component{
                     <a href="#main" class="list-group-item active">
                         Leetcode Subjects
                     </a>
-                    <a href="#leetcode/90" class="list-group-item">90 Subset II</a>
-                    <a href="#leetcode/91" class="list-group-item">91 Decode Ways</a>
-                    <a href="#leetcode/92" class="list-group-item">92 Reverse Node List II</a>
-                    <a href="#leetcode/93" class="list-group-item">93 Restore IP Addresses</a>
-                    <a href="#leetcode/93" class="list-group-item">94. Binary Tree Inorder Traversal</a>
+                    {indexes}
                     </div>
                 </div>
-                    <SubsetII id="leetcode/90" ></SubsetII>
+                    <SubsetII id="leetcode/90" />
                     <DecodeWays id="leetcode/91"/>
                     <ReverseListII id="leetcode/92"/>
                     <RestoreIPAddresses id="leetcode/93" />
-                    <BinaryTreeInorder id="leetcode/93" />
+                    <BinaryTreeInorder id="leetcode/94" />
+                    <UniqueTreesII id="leetcode/95" />
+                    <UniqueTrees id="leetcode/96" />
             </div>
         )
     }

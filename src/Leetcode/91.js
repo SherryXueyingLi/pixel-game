@@ -11,7 +11,7 @@
 
 // The number of ways decoding "12" is 2.
 import React from "react";
-import Template from "../Leetcode/Template";
+import Template from "./Template";
 
 /**
  * @param {string} s
