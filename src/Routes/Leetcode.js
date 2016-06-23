@@ -8,6 +8,12 @@ import UniqueTreesII from "../Leetcode/95";
 import UniqueTrees from "../Leetcode/96";
 import Interleaving from "../Leetcode/97";
 import ValidateBSTree from "../Leetcode/98";
+import RecoverBST from "../Leetcode/99";
+import SameTree from "../Leetcode/100";
+import SymmetricTree from "../Leetcode/101";
+import LevelOrder from "../Leetcode/102";
+import ZigzagLevel from "../Leetcode/103";
+import TreeDepth from "../Leetcode/104";
 
 export default class Leetcode extends React.Component{
     constructor(){
@@ -24,11 +30,17 @@ export default class Leetcode extends React.Component{
             95: "Unique Binary Search Trees II",
             96: "Unique Binary Search Trees",
             97: "Interleaving String",
-            98: "Validate Binary Search Tree"
+            98: "Validate Binary Search Tree",
+            99: "Recover Binary Search Tree",
+            100: "Same Tree",
+            101: "Symmetric Tree",
+            102: "Binary Tree Level Order Traversal",
+            103: "Binary Tree Zigzag Level Order Traversal",
+            104: "Maximum Depth of Binary Tree"
         };
         const indexes = Object.keys(subjects).map((key) =>{
                            return (
-                               <a href={"#leetcode/"+key} class="list-group-item" key={key}>{key} {subjects[key]}</a>
+                               <a href={"#leetcode/"+key} class="list-group-item" key={key}>{key}. {subjects[key]}</a>
                            );
                        })
         return (
@@ -40,22 +52,28 @@ export default class Leetcode extends React.Component{
 
                 There's the start of this page.<br/></pre>
                 <div>
-                <div class="list-group" style={{position: "fixed", left:"5%"}}>
-                    <a href="#main" class="list-group-item active">
+                <div class="list-group" style={{position: "fixed", left:"0px"}}>
+                    <a href="#leetcode" class="list-group-item active">
                         Leetcode Subjects
                     </a>
                     {indexes}
                     </div>
                 </div>
-                    <SubsetII id="leetcode/90" />
-                    <DecodeWays id="leetcode/91"/>
-                    <ReverseListII id="leetcode/92"/>
-                    <RestoreIPAddresses id="leetcode/93" />
-                    <BinaryTreeInorder id="leetcode/94" />
-                    <UniqueTreesII id="leetcode/95" />
-                    <UniqueTrees id="leetcode/96" />
-                    <Interleaving id="leetcode/97" />
-                    <ValidateBSTree id="leetcode/98" />
+                <SubsetII id="leetcode/90" />
+                <DecodeWays id="leetcode/91"/>
+                <ReverseListII id="leetcode/92"/>
+                <RestoreIPAddresses id="leetcode/93" />
+                <BinaryTreeInorder id="leetcode/94" />
+                <UniqueTreesII id="leetcode/95" />
+                <UniqueTrees id="leetcode/96" />
+                <Interleaving id="leetcode/97" />
+                <ValidateBSTree id="leetcode/98" />
+                <RecoverBST id="leetcode/99" />
+                <SameTree id="leetcode/100" />
+                <SymmetricTree id="leetcode/101" />
+                <LevelOrder id="leetcode/102" />
+                <ZigzagLevel id="leetcode/103" />
+                <TreeDepth id="leetcode/103"/>
             </div>
         )
     }

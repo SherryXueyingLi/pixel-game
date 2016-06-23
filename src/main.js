@@ -12,6 +12,7 @@ ReactDOM.render(
     <Router history ={hashHistory}>
         <Route path="/" component={Layout}>
             <IndexRoute component={SnameGame}></IndexRoute>
+            <Route path="snake" name="snake" component={SnameGame}></Route>
             <Route path="othello" name="othello" component={OthelloGame}></Route>
             <Route path="leetcode(/:subjects)" name="leetcode" component={Leetcode}></Route>
         </Route>
