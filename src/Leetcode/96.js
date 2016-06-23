@@ -47,7 +47,7 @@ export default class UniqueTreesII extends React.Component{
 }
 
             `,
-            explain:`To solve this problem, we need the claim the following facts: \n
+            explain:`To solve this problem, we need to claim the following facts: \n
 1. the number of BST tree of [1,2,3,4] is same as number of BST tree of [5,6,7,8].\n
 2. P[n]means the BST numbers for range [1...n]. P[n,x] means when x is root node. the BST number is __P[n, x] = P[x-1]*P[x+1...n]__\n
 \n
@@ -61,7 +61,8 @@ With condition 1, we could conclude that P[j...n] = P[1...n-j+1] =  P[n-j+1];\n
 \n
     In conclusion: BST tree number are equal when first number and last number's interval are equal, in formular above, n-j = (n-j+1)-1;\n
 \n
-SO the final formular is P[1...n] = P[0]*P[n-1] + P[1]*P[n-2] + ... + P[n-1]*P[0]; And P[0] = P[1] = 1;\n
+SO the final formular is:\n
+    P[1...n] = P[0]*P[n-1] + P[1]*P[n-2] + ... + P[n-1]*P[0]; And P[0] = P[1] = 1;\n
             `
         }
     }

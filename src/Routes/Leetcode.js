@@ -6,6 +6,8 @@ import RestoreIPAddresses from "../Leetcode/93";
 import BinaryTreeInorder from "../Leetcode/94";
 import UniqueTreesII from "../Leetcode/95";
 import UniqueTrees from "../Leetcode/96";
+import Interleaving from "../Leetcode/97";
+import ValidateBSTree from "../Leetcode/98";
 
 export default class Leetcode extends React.Component{
     constructor(){
@@ -18,9 +20,11 @@ export default class Leetcode extends React.Component{
             91: "Decode Ways",
             92: "Reverse Node List II",
             93: "Restore IP Addresses",
-            94:"Binary Tree Inorder Traversal",
+            94: "Binary Tree Inorder Traversal",
             95: "Unique Binary Search Trees II",
-            96: "Unique Binary Search Trees"
+            96: "Unique Binary Search Trees",
+            97: "Interleaving String",
+            98: "Validate Binary Search Tree"
         };
         const indexes = Object.keys(subjects).map((key) =>{
                            return (
@@ -31,7 +35,7 @@ export default class Leetcode extends React.Component{
             <div>
                 <pre id="main">The story is, one day I open my leetcode page, planning to review my past codes, and found that leetcode is not actually saving any code for me.<br/>
                 Which means all my code is gone for good.<br/>
-                Then I told myself, it's time to do what you have planed for a long time but did not do any may not do ever:<br/>
+                Then I told myself, it's time to do what you have planed for a long time but did not do and may not do ever:<br/>
                 To reserve a page that holding all the code and solutions.<br/>
 
                 There's the start of this page.<br/></pre>
@@ -50,6 +54,8 @@ export default class Leetcode extends React.Component{
                     <BinaryTreeInorder id="leetcode/94" />
                     <UniqueTreesII id="leetcode/95" />
                     <UniqueTrees id="leetcode/96" />
+                    <Interleaving id="leetcode/97" />
+                    <ValidateBSTree id="leetcode/98" />
             </div>
         )
     }
