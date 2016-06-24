@@ -14,14 +14,27 @@ import SymmetricTree from "../Leetcode/101";
 import LevelOrder from "../Leetcode/102";
 import ZigzagLevel from "../Leetcode/103";
 import TreeDepth from "../Leetcode/104";
+import ConsTreeFromPI from "../Leetcode/105";
+import ConsTreeFromPI2 from "../Leetcode/106";
+import LevelOrderII from "../Leetcode/107";
+import Array2BST from "../Leetcode/108";
+import List2BST from "../Leetcode/109";
+import BalancedBinaryTree from "../Leetcode/110";
+import MinDepth from "../Leetcode/111";
+import PathSum from "../Leetcode/112";
+import PathSumII from "../Leetcode/113";
+
+
 
 export default class Leetcode extends React.Component{
     constructor(){
         super();
+        
     }
 
     render(){
-        const subjects = {
+        const { subjects } = this.props.params;
+        const subjectNames = {
             90: "Subset II",
             91: "Decode Ways",
             92: "Reverse Node List II",
@@ -36,13 +49,53 @@ export default class Leetcode extends React.Component{
             101: "Symmetric Tree",
             102: "Binary Tree Level Order Traversal",
             103: "Binary Tree Zigzag Level Order Traversal",
-            104: "Maximum Depth of Binary Tree"
+            104: "Maximum Depth of Binary Tree",
+            105: "Construct Tree from Preorder and Inorder Traversal",
+            106: "Construct Tree from Inorder and Postorder Traversal",
+            107: "Binary Tree Level Order Traversal II",
+            108: "Convert Sorted Array to Binary Search Tree",
+            109: "Convert Sorted List to Binary Search Tree",
+            110: "Balanced Binary Tree",
+            111: "Minimum Depth of Binary Tree",
+            112: "Path Sum",
+            113: "Path Sum II"
         };
-        const indexes = Object.keys(subjects).map((key) =>{
+        const indexes = Object.keys(subjectNames).filter(v=>{return +v >= +subjects && +v <(+subjects+10); }).map((key) =>{
                            return (
-                               <a href={"#leetcode/"+key} class="list-group-item" key={key}>{key}. {subjects[key]}</a>
+                               <a href={`#leetcode/${subjects}/${key}`} class="list-group-item" key={key}>{key}. {subjectNames[key]}</a>
                            );
-                       })
+                       });
+        const tags = {
+            90: SubsetII,
+            91: DecodeWays,
+            92: ReverseListII,
+            93: RestoreIPAddresses,
+            94: BinaryTreeInorder,
+            95: UniqueTreesII,
+            96: UniqueTreesII,
+            97: Interleaving,
+            98: ValidateBSTree,
+            99: RecoverBST,
+            100: SameTree,
+            101: SymmetricTree,
+            102: LevelOrder,
+            103: ZigzagLevel,
+            104: TreeDepth,
+            105: ConsTreeFromPI,
+            106: ConsTreeFromPI2,
+            107: LevelOrderII,
+            108: Array2BST,
+            109: List2BST,
+            110: BalancedBinaryTree,
+            111: MinDepth,
+            112: PathSum,
+            113: PathSumII
+        };
+        const codes = Object.keys(tags).filter(v=>{             
+                    return +v>=+subjects && +v <(+subjects+10);}).map(key=>{
+                        return React.createElement(tags[key], {id: `leetcode/${subjects}/${key}`, key})
+                    });
+        
         return (
             <div>
                 <pre id="main">The story is, one day I open my leetcode page, planning to review my past codes, and found that leetcode is not actually saving any code for me.<br/>
@@ -52,28 +105,14 @@ export default class Leetcode extends React.Component{
 
                 There's the start of this page.<br/></pre>
                 <div>
-                <div class="list-group" style={{position: "fixed", left:"0px"}}>
+                <div class="list-group" style={{position: "fixed", left:"0px", fontSize:"0.7em"}}>
                     <a href="#leetcode" class="list-group-item active">
                         Leetcode Subjects
                     </a>
                     {indexes}
                     </div>
                 </div>
-                <SubsetII id="leetcode/90" />
-                <DecodeWays id="leetcode/91"/>
-                <ReverseListII id="leetcode/92"/>
-                <RestoreIPAddresses id="leetcode/93" />
-                <BinaryTreeInorder id="leetcode/94" />
-                <UniqueTreesII id="leetcode/95" />
-                <UniqueTrees id="leetcode/96" />
-                <Interleaving id="leetcode/97" />
-                <ValidateBSTree id="leetcode/98" />
-                <RecoverBST id="leetcode/99" />
-                <SameTree id="leetcode/100" />
-                <SymmetricTree id="leetcode/101" />
-                <LevelOrder id="leetcode/102" />
-                <ZigzagLevel id="leetcode/103" />
-                <TreeDepth id="leetcode/103"/>
+                {codes}
             </div>
         )
     }

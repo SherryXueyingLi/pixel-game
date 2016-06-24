@@ -24,7 +24,6 @@ export default class Template extends React.Component{
             case "Easy" : return "panel-info";
             default : return "panel-default";
         }
-        panel-primary
     }
 
     render(){

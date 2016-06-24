@@ -16,7 +16,7 @@ var sortedArrayToBST = function(nums) {
     root.right = sortedArrayToBST(nums.slice(ith+1));
     return root;
 };
-export default class ClassName extends React.Component{
+export default class Array2BST extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -34,6 +34,6 @@ export default class ClassName extends React.Component{
 
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="" id={this.props.id} difficulty=""/>
+        return <Template code={code} explain={explain} title="108. Convert Sorted Array to Binary Search Tree" id={this.props.id} difficulty="Medium"/>
     }
 }

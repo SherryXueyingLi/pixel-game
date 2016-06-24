@@ -28,7 +28,7 @@ var findList = function(head) {
     return a;
 };
 
-export default class ClassName extends React.Component{
+export default class List2BST extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -54,6 +54,6 @@ var findList = function(head) {
 
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="" id={this.props.id} difficulty=""/>
+        return <Template code={code} explain={explain} title="109. Convert Sorted List to Binary Search Tree" id={this.props.id} difficulty="Medium"/>
     }
 }
