@@ -24,7 +24,7 @@ import MinDepth from "../Leetcode/111";
 import PathSum from "../Leetcode/112";
 import PathSumII from "../Leetcode/113";
 
-
+import NumberofIslands  from "../Leetcode/200";
 
 export default class Leetcode extends React.Component{
     constructor(){
@@ -58,7 +58,8 @@ export default class Leetcode extends React.Component{
             110: "Balanced Binary Tree",
             111: "Minimum Depth of Binary Tree",
             112: "Path Sum",
-            113: "Path Sum II"
+            113: "Path Sum II",
+            200: "Number of Islands"
         };
         const indexes = Object.keys(subjectNames).filter(v=>{return +v >= +subjects && +v <(+subjects+10); }).map((key) =>{
                            return (
@@ -89,7 +90,8 @@ export default class Leetcode extends React.Component{
             110: BalancedBinaryTree,
             111: MinDepth,
             112: PathSum,
-            113: PathSumII
+            113: PathSumII,
+            200: NumberofIslands
         };
         const codes = Object.keys(tags).filter(v=>{             
                     return +v>=+subjects && +v <(+subjects+10);}).map(key=>{

@@ -24,19 +24,43 @@ import Template from "./Template";
  * @return {number[][]}
  */
 var pathSum = function(root, sum) {
-    
+    return subpathSum(root, sum, []);
+};
+
+var subpathSum = function(root, sum, array) {
+    if(root === null) return array;
+    if(root.val === sum && root.left===null && root.right === null){
+        return [array.concat(root.val)];
+    }
+    let left, right;
+    if(root.left) left = subpathSum(root.left, sum-root.val, array.concat(root.val));
+    if(root.right) right = subpathSum(root.right, sum-root.val, array.concat(root.val));
+    return (left ||[]).concat(right||[]);
 };
 export default class ClassName extends React.Component{
     constructor(){
         super();
         this.state = {
-            code: ``,
+            code: `var pathSum = function(root, sum) {
+    return subpathSum(root, sum, []);
+};
+
+var subpathSum = function(root, sum, array) {
+    if(root === null) return array;
+    if(root.val === sum && root.left===null && root.right === null){
+        return [array.concat(root.val)];
+    }
+    let left, right;
+    if(root.left) left = subpathSum(root.left, sum-root.val, array.concat(root.val));
+    if(root.right) right = subpathSum(root.right, sum-root.val, array.concat(root.val));
+    return (left ||[]).concat(right||[]);
+};`,
             explain:``
         }
     }
 
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="" id={this.props.id} difficulty=""/>
+        return <Template code={code} explain={explain} title="113. Path Sum II" id={this.props.id} difficulty="Medium"/>
     }
 }
