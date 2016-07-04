@@ -62,11 +62,11 @@ var reverseBetween = function(head, m, n) {
 description: `To Create Three Points: The Pre Point, pointing to the pre node of the target, the start of the target, and the target node.`
         }
     }
-
+    static title(){ return "92. Reverse Linked List II";}
     render(){
         const {code, description} = this.state;
         return (
-            <Template code = {code} explain = {description} title="92. Reverse Linked List II" id={this.props.id}/>
+            <Template code = {code} explain = {description} title={ReverseListII.title()} id={this.props.id}/>
         );
     }
 }

@@ -68,10 +68,11 @@ Now we could conclude, for any tree(T), if the root node has an parent(P), and P
         }
     }
 
+    static title(){ return "98. Validate Binary Search Tree";}
     render(){
         const {code, explain} = this.state;
         return (
-            <Template code={code} explain={explain} title="98. Validate Binary Search Tree" id={this.props.id}/>
+            <Template code={code} explain={explain} title={ValidateBSTree.title()} id={this.props.id}/>
         );
     }
 }

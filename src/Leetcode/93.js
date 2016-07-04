@@ -82,11 +82,11 @@ In this case, we have to consider the next number is "1", "10", "100", so we set
 `
         }
     }
-
+    static title(){ return "93. Reverse Linked List II";}
     render(){
         const {code, explain} = this.state;
         return (
-            <Template code = {code} explain = {explain} title="93. Reverse Linked List II" id={this.props.id}/>
+            <Template code = {code} explain = {explain} title={RestoreIPAddresses.title()} id={this.props.id}/>
         );
     }
 }

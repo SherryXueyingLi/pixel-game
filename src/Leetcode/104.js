@@ -35,8 +35,10 @@ var depth = function(root, cur){
         }
     }
 
+    static title(){ return "104. Maximum Depth of Binary Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="104. Maximum Depth of Binary Tree" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={BTDepth.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

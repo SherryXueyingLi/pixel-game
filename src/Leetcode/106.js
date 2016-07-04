@@ -87,8 +87,10 @@ A more space saving solution is :\n
         }
     }
 
+    static title(){ return "106. Construct Binary Tree from Inorder and Postorder Traversal";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="106. Construct Binary Tree from Inorder and Postorder Traversal" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

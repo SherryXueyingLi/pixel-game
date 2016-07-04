@@ -52,8 +52,10 @@ var findList = function(head) {
         }
     }
 
+    static title(){ return "109. Convert Sorted List to Binary Search Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="109. Convert Sorted List to Binary Search Tree" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={List2BST.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

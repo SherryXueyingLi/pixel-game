@@ -54,11 +54,11 @@ var numDecodings = function(s){
             description:'Assume that we have already resolved [0...n]\'s solution, and calculating [0...n+1]\'s solution: '
         };
     }
-
+    static title(){ return "91. Decode Ways";}
     render(){
         const {code, description} = this.state;
         return (
-            <Template code={code} explain={description} title="91. Decode Ways" id={this.props.id}></Template>
+            <Template code={code} explain={description} title={DecodeWays.title()} id={this.props.id}></Template>
         );
     }
 }

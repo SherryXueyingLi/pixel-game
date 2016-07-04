@@ -30,7 +30,7 @@ var numTrees = function(n) {
 };
 
 
-export default class UniqueTreesII extends React.Component{
+export default class className extends React.Component{
     constructor(){
         super();
         this.state = {
@@ -67,10 +67,12 @@ SO the final formular is:\n
         }
     }
 
+    static title(){ return "96. Unique Binary Search Trees";}
+
     render(){
         const {code, explain} = this.state;
         return (
-            <Template code={code} explain={explain} title="96. Unique Binary Search Trees" id={this.props.id}/>
+            <Template code={code} explain={explain} title={className.title()} id={this.props.id}/>
         );
     }
 }

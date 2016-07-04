@@ -92,10 +92,12 @@ In this case, we the value could be true if any of the following situation is tr
         }
     }
 
+    static title(){ return "97. Interleaving String";}
+
     render(){
         const {code, explain} = this.state;
         return (
-            <Template code={code} explain={explain} title="97. Interleaving String" id={this.props.id}/>
+            <Template code={code} explain={explain} title={Interleaving.title()} id={this.props.id}/>
         );
     }
 }

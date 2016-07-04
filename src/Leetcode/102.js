@@ -55,8 +55,10 @@ var travel = function(root, level, rt) {
         }
     }
 
+    static title(){ return "102. Binary Tree Level Order Traversal";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="102. Binary Tree Level Order Traversal" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={BSTLevelOrder.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

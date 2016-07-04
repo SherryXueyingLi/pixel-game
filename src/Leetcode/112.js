@@ -44,8 +44,10 @@ export default class PathSum extends React.Component{
         }
     }
 
+    static title(){ return "112. Path Sum";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="112. Path Sum" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={PathSum.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

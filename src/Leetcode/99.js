@@ -91,9 +91,10 @@ For those who cannot access to youtobe, check the answer [here](https://leetcode
             `
         }
     }
+    static title(){ return "99. Recover Binary Search Tree";}
 
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="99. Recover Binary Search Tree" id={this.props.id} difficulty="Hard"/>
+        return <Template code={code} explain={explain} title={RecoverTree.title()} id={this.props.id} difficulty="Hard"/>
     }
 }

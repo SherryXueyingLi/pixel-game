@@ -32,8 +32,10 @@ export default class MinDepth extends React.Component{
         }
     }
 
+    static title(){ return "111. Minimum Depth of Binary Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="111. Minimum Depth of Binary Tree" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={MinDepth.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

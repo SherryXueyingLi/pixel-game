@@ -69,8 +69,10 @@ This is the [recursive] solution. \n
         }
     }
 
+    static title(){ return "105. Construct Binary Tree from Preorder and Inorder Traversal";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="105. Construct Binary Tree from Preorder and Inorder Traversal" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={ConstructTree.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

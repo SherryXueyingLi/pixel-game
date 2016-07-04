@@ -52,8 +52,10 @@ var checkInterval = function(root){
         }
     }
 
+    static title(){ return "110. Balanced Binary Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="110. Balanced Binary Tree" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={BalancedBinaryTree.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

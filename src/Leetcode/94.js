@@ -61,11 +61,11 @@ The solution is actually like when we calculating manually, when we get the root
             `
         }
      }
-
-     render(){
+    static title(){ return "94. Binary Tree Inorder Traversal";}
+    render(){
         const {code, explain} = this.state;
         return (
-            <Template code = {code} explain = {explain} title="94. Binary Tree Inorder Traversal" id={this.props.id}/>
+            <Template code = {code} explain = {explain} title={BinaryTreeInorder.title()} id={this.props.id}/>
         );
      }
 }

@@ -30,8 +30,10 @@ export default class SameTree extends React.Component{
         }
     }
 
+    static title(){ return "100. Same Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="100. Same Tree" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={SameTree.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

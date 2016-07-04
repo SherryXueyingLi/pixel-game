@@ -85,8 +85,10 @@ export default class ClassName extends React.Component{
         }
     }
 
+    static title(){ return "76. Minimum Window Substring";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="76. Minimum Window Substring" id={this.props.id} difficulty="Hard"/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Hard"/>
     }
 }

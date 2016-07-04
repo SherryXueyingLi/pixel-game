@@ -59,8 +59,10 @@ var travel = function(root, level, rt) {
         }
     }
 
+    static title(){ return "103. Binary Tree Zigzag Level Order Traversal";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="103. Binary Tree Zigzag Level Order Traversal" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={ZigzagLevel.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

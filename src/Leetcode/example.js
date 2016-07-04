@@ -10,8 +10,10 @@ export default class ClassName extends React.Component{
         }
     }
 
+    static title(){ return "";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="" id={this.props.id} difficulty=""/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty=""/>
     }
 }

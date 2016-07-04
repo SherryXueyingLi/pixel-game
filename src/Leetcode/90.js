@@ -63,12 +63,13 @@ export default class SubsetII extends React.Component{
     };`,
                 explain: ''}
     }
+    static title(){ return "90. SubSet II";}
 
     render(){
         const {code, explain} = this.state;
         return (
             <div>
-                <Template code={code} title="90. SubSet II" id={this.props.id}></Template>
+                <Template code={code} title={SubsetII.title()} id={this.props.id}></Template>
             </div>
         )
     }

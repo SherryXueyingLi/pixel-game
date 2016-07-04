@@ -42,8 +42,10 @@ export default class ClassName extends React.Component{
         }
     }
 
+    static title(){ return "235. Lowest Common Ancestor of a Binary Search Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="235. Lowest Common Ancestor of a Binary Search Tree" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

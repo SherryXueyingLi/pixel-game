@@ -79,11 +79,12 @@ In this case, when we considering x as root, we have __p1*p2__ possible binary t
             `
         }
     }
+    static title(){ return "95. Unique Binary Search Trees II";}
 
     render(){
         const {code, explain} = this.state;
         return (
-            <Template code={code} explain={explain} title="95. Unique Binary Search Trees II" id={this.props.id}/>
+            <Template code={code} explain={explain} title={UniqueTreesII.title()} id={this.props.id}/>
         );
     }
 }

@@ -59,8 +59,10 @@ var subpathSum = function(root, sum, array) {
         }
     }
 
+    static title(){ return "113. Path Sum II";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="113. Path Sum II" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

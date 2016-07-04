@@ -70,8 +70,10 @@ var mark = function(grid, i, j){
         }
     }
 
+    static title(){ return "200. Number of Islands";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="200. Number of Islands" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={NumberofIslands.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

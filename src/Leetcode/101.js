@@ -42,8 +42,10 @@ var areSymmetricTree = function(t1, t2) {
         }
     }
 
+    static title(){ return "101. Symmetric Tree";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="101. Symmetric Tree" id={this.props.id} difficulty="Easy"/>
+        return <Template code={code} explain={explain} title={SymmetricTree.title()} id={this.props.id} difficulty="Easy"/>
     }
 }

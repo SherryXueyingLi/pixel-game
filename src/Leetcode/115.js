@@ -64,8 +64,10 @@ export default class ClassName extends React.Component{
         }
     }
 
+    static title(){ return "115. Distinct Subsequences";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="115. Distinct Subsequences" id={this.props.id} difficulty="Hard"/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Hard"/>
     }
 }

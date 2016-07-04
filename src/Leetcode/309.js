@@ -39,8 +39,10 @@ export default class ClassName extends React.Component{
         }
     }
 
+    static title(){ return "309.Best Time to Buy and Sell Stock with Cooldown";}
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="309.Best Time to Buy and Sell Stock with Cooldown" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Medium"/>
     }
 }

@@ -32,8 +32,11 @@ export default class Array2BST extends React.Component{
         }
     }
 
+    static title(){ return "108. Convert Sorted Array to Binary Search Tree";}
+
+
     render(){
         const {code, explain} = this.state;
-        return <Template code={code} explain={explain} title="108. Convert Sorted Array to Binary Search Tree" id={this.props.id} difficulty="Medium"/>
+        return <Template code={code} explain={explain} title={Array2BST.title()} id={this.props.id} difficulty="Medium"/>
     }
 }
