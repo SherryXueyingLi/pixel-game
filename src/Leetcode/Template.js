@@ -27,15 +27,22 @@ export default class Template extends React.Component{
     }
 
     render(){
-        const html = this.md.render(this.props.explain|| '');
+        const explain = this.md.render(this.props.explain|| '');
+        const subject = this.md.render(this.props.subject|| '');
         const code = this.md.render("\n``` js\n" + (this.props.code||'')  +"\n```\n");
         
         return(
             <div class={"panel "+this.getTheme()} id={this.props.id}>
             <div class="panel-heading">{this.props.title}</div>
+            <div class="panel-body" style={{borderBottom: 'solid #cccccc 1px'}}>
+                <div class="row">   
+                        <div class="col-md-12" dangerouslySetInnerHTML={{__html: subject}} >
+                        </div>
+                </div>
+            </div>
             <div class="panel-body">
                 <div class="row">   
-                        <div class="col-md-6" dangerouslySetInnerHTML={{__html: html}} >
+                        <div class="col-md-6" dangerouslySetInnerHTML={{__html: explain}} >
                         </div>
                         <div class="col-md-6" dangerouslySetInnerHTML={{__html: code}}>
                         </div>
