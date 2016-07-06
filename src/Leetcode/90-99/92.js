@@ -59,9 +59,9 @@ description: `To Create Three Points: The Pre Point, pointing to the pre node of
 subject: `Reverse a linked list from position m to n. Do it in-place and in one-pass.\n
 
 For example:\n
-Given 1->2->3->4->5->NULL, m = 2 and n = 4,\n
+Given \`1->2->3->4->5->NULL\`, m = 2 and n = 4,\n
 
-return 1->4->3->2->5->NULL.\n
+return \`1->4->3->2->5->NULL.\`\n
 
 __Note:__\n
 Given m, n satisfy the following condition:\n

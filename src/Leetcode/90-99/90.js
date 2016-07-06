@@ -65,18 +65,18 @@ When we are getting set 2, we fist go two steps, find the last element that are 
 
             subject: `Given a collection of integers that might contain duplicates, nums, return all possible subsets.\n
 
-Note: The solution set must not contain duplicate subsets.\n
+__Note:__ The solution set must not contain duplicate subsets.\n
 
 For example,\n
-If nums = [1,2,2], a solution is:\n
+If nums = \`[1,2,2]\`, a solution is:\n
 
     [
-    [2],
-    [1],
-    [1,2,2],
-    [2,2],
-    [1,2],
-    []
+        [2],
+        [1],
+        [1,2,2],
+        [2,2],
+        [1,2],
+        []
     ]`
 }
     }

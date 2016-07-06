@@ -45,7 +45,7 @@ var numDecodings = function(s){
     return preOne;
 };`,
             description:'Assume that we have already resolved [0...n]\'s solution, and calculating [0...n+1]\'s solution: ',
-            subject: `A message containing letters from A-Z is being encoded to numbers using the following mapping:
+            subject: `A message containing letters from \`A-Z\` is being encoded to numbers using the following mapping:
 
     'A' -> 1
     'B' -> 2
@@ -54,9 +54,9 @@ var numDecodings = function(s){
 Given an encoded message containing digits, determine the total number of ways to decode it.\n
 
 For example,\n
-Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).\n
+Given encoded message \`"12"\`, it could be decoded as \`"AB"\` (1 2) or \`"L"\` (12).\n
 
-The number of ways decoding "12" is 2.`
+The number of ways decoding \`"12"\` is 2.`
         };
     }
     static title(){ return "91. Decode Ways";}

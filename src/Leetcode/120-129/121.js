@@ -26,14 +26,14 @@ export default class ClassName extends React.Component{
 
 If you were only permitted to complete at most one transaction (ie, buy one and sell one share of the stock), design an algorithm to find the maximum profit.\n
 
-Example 1:\n
-Input: [7, 1, 5, 3, 6, 4]\n
-Output: 5\n
+__Example 1:__\n
+    Input: [7, 1, 5, 3, 6, 4]\n
+    Output: 5\n
 
 max. difference = 6-1 = 5 (not 7-1 = 6, as selling price needs to be larger than buying price)\n
-Example 2:\n
-Input: [7, 6, 4, 3, 1]\n
-Output: 0\n
+__Example 2:__\n
+    Input: [7, 6, 4, 3, 1]\n
+    Output: 0\n
 
 In this case, no transaction is done, i.e. max profit = 0.`,
              code: `/**
@@ -48,7 +48,8 @@ var maxProfit = function(prices) {
     }
     return maxProfit;
 };`,
-            explain:``          
+            explain:`This problem could be also descript as 'Find Max(n[i]-n[j]) where i>j.\n
+So for each element i, what we need to know is to find min(n[j]) where j<i, so we keep a value 'min', which the min element from 0-i, and a value'maxProfit' which means the max profit from 0 to i.`          
         }
     }
 

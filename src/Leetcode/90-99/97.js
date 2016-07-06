@@ -90,11 +90,11 @@ In this case, we the value could be true if any of the following situation is tr
 
 For example,\n
 Given:\n
-s1 = "aabcc",\n
-s2 = "dbbca",\n
+s1 = \`"aabcc"\`,\n
+s2 = \`"dbbca"\`,\n
 
-When s3 = "aadbbcbcac", return true.\n
-When s3 = "aadbbbaccc", return false.\n`
+When s3 = \`"aadbbcbcac"\`, return true.\n
+When s3 = \`"aadbbbaccc"\`, return false.\n`
         }
     }
 

@@ -70,11 +70,15 @@ export default class navigationBar extends React.Component {
                         <li class={"dropdown "+openLeetcode + leetcodeClass}>
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded={expandLeetcode} onClick={this.toggleLeetcode.bind(this)}>Leetcode <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu" onClick={this.toggleLeetcode.bind(this)}>
+                                <li><Link to="leetcode/1">1-10</Link></li>
+                                <li class="divider"></li>
                                 <li><Link to="leetcode/90">90-99</Link></li>
                                 <li><Link to="leetcode/100">100-109</Link></li>                              
                                 <li class="divider"></li>
                                 <li><Link to="leetcode/110">110-119</Link></li>  
-                                <li><Link to="leetcode/200">200-209</Link></li>   
+                                <li><Link to="leetcode/120">120-129</Link></li>  
+                                <li class="divider"></li>
+                                <li><Link to="leetcode/200">200-209</Link></li>    
                             </ul>
                         </li>
                         <li class={"dropdown "+openRelax + snakeClass + othelloClass}>

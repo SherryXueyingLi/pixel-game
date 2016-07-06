@@ -12,7 +12,7 @@ check [Here](http://sherryxueyingli.github.io/pixel-game)
 90-99 Finished.
 100-109 Finished.
 110-119 Finished.
-120-129 In progress.
+120-129  126 & 127 left.
 130-139
 140-149
 150-159

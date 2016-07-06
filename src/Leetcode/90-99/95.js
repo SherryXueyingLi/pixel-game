@@ -71,7 +71,7 @@ and for Each number x we pick, we know that **[1...x-1]** are on it's left, and 
 So we need to find all possible trees of 1...x-1, all possible trees of x+1...n, put them as left and right lef of n respectively,\n
 * Remember trees of [1...x-1] may have **p1** possible solutions, and [x+1...n] may have **p2** possible solutions,\n
 In this case, when we considering x as root, we have __p1*p2__ possible binary trees, we just need to permutation the possible solutions and return.
-            `,subject:`Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1...n.\n
+            `,subject:`Given an integer n, generate all structurally unique __BST's__ (binary search trees) that store values 1...n.\n
 
 For example,\n
 Given n = 3, your program should return all 5 unique BST's shown below.\n

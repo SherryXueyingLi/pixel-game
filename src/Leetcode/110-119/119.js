@@ -23,7 +23,7 @@ var getRow = function(rowIndex) {
             subject:`Given an index k, return the kth row of the Pascal's triangle.\n
 
 For example, given k = 3,\n
-Return [1,3,3,1].\n
+Return \`[1,3,3,1]\`.\n
 
 __Note:__
 Could you optimize your algorithm to use only O(k) extra space?`

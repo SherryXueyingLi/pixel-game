@@ -70,7 +70,9 @@ when we find x in the inOrder, we know that all value in stack is in it's left s
  \n
 This is the [recursive] solution. \n
 
-            `,subject: "Given preorder and inorder traversal of a tree, construct the binary tree."
+            `,subject: `Given preorder and inorder traversal of a tree, construct the binary tree.\n
+__Note:__
+You may assume that duplicates do not exist in the tree.`
         }
     }
 

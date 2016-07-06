@@ -48,7 +48,7 @@ var travel = function(root, level, rt) {
             `,subject:`Given a binary tree, return the zigzag level order traversal of its nodes' values. (ie, from left to right, then right to left for the next level and alternate between).\n
 
 For example:\n
-Given binary tree [3,9,20,null,null,15,7],\n
+Given binary tree \`[3,9,20,null,null,15,7]\`,\n
         3
        / \\
       9  20

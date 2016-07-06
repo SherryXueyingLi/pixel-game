@@ -56,19 +56,19 @@ Now we could conclude, for any tree(T), if the root node has an parent(P), and P
 
 Assume a BST is defined as follows:\n
 
-The left subtree of a node contains only nodes with keys less than the node's key.\n
-The right subtree of a node contains only nodes with keys greater than the node's key.\n
-Both the left and right subtrees must also be binary search trees.\n
+* The left subtree of a node contains only nodes with keys __less than__ the node's key.\n
+* The right subtree of a node contains only nodes with keys __greater than__ the node's key.\n
+* Both the left and right subtrees must also be binary search trees.\n
 Example 1:\n
         2
        / \\
       1   3
-Binary tree [2,1,3], return true.\n
+Binary tree \`[2,1,3]\`, return true.\n
 Example 2:\n
         1
        / \\
       2   3
-Binary tree [1,2,3], return false.\n`
+Binary tree \`[1,2,3]\`, return false.\n`
         }
     }
 

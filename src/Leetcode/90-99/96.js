@@ -59,7 +59,7 @@ With condition 1, we could conclude that P[j...n] = P[1...n-j+1] =  P[n-j+1];\n
 \n
 SO the final formular is:\n
     P[1...n] = P[0]*P[n-1] + P[1]*P[n-2] + ... + P[n-1]*P[0]; And P[0] = P[1] = 1;\n
-            `,subject:`Given n, how many structurally unique BST's (binary search trees) that store values 1...n?\n
+            `,subject:`Given n, how many structurally unique __BST's__ (binary search trees) that store values 1...n?\n
 
 For example,\n
 Given n = 3, there are a total of 5 unique BST's.\n

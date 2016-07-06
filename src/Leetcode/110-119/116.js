@@ -32,9 +32,9 @@ If the root node has next, then it's right child's next is it's next node's left
       TreeLinkNode *right;
       TreeLinkNode *next;
     }\n
-Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.\n
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to \`NULL\`.\n
 
-Initially, all next pointers are set to NULL.\n
+Initially, all next pointers are set to \`NULL\`.\n
 
 __Note:__\n
 

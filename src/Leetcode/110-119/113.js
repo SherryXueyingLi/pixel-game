@@ -48,7 +48,7 @@ var subpathSum = function(root, sum, array) {
             explain:``,subject:`Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.\n
 
 For example:\n
-Given the below binary tree and sum = 22,\n
+Given the below binary tree and \`sum = 22\`,\n
                   5
                  / \\
                 4   8

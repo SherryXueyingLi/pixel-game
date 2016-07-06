@@ -53,13 +53,13 @@ The solution is actually like when we calculating manually, when we get the root
             `,subject:`Given a binary tree, return the inorder traversal of its nodes' values.\n
 
 For example:\n
-Given binary tree [1,null,2,3],\n
+Given binary tree \`[1,null,2,3]\`,\n
 	 1
 	  \\
 	   2
 	 /
 	3
-return [1,3,2].\n
+return \`[1,3,2]\`.\n
 
 Note: Recursive solution is trivial, could you do it iteratively?`
         }
