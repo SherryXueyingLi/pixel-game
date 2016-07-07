@@ -77,6 +77,7 @@ export default class navigationBar extends React.Component {
                                 <li class="divider"></li>
                                 <li><Link to="leetcode/110">110-119</Link></li>  
                                 <li><Link to="leetcode/120">120-129</Link></li>  
+                                <li><Link to="leetcode/130">130-139</Link></li>  
                                 <li class="divider"></li>
                                 <li><Link to="leetcode/200">200-209</Link></li>    
                             </ul>

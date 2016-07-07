@@ -49,6 +49,13 @@ import WordLadder from "../Leetcode/120-129/127";
 import LongestSeq from "../Leetcode/120-129/128";
 import SumLeaf from "../Leetcode/120-129/129";
 
+import SurroundedRegions from "../Leetcode/130-139/130";
+import PalindromePartition from "../Leetcode/130-139/131";
+import PalindromePartitionII from "../Leetcode/130-139/132";
+import CloneGraph from "../Leetcode/130-139/133";
+import GasStation from "../Leetcode/130-139/134";
+import Candies from "../Leetcode/130-139/135";
+
 import NumberofIslands  from "../Leetcode/200";
 
 export default class Leetcode extends React.Component{
@@ -70,6 +77,7 @@ export default class Leetcode extends React.Component{
             115: DistinctSubsequences, 116: NextRightPointer, 117: NextRightPointerII, 118: PascalTriangle, 119: PascalTriangleII,
             120: Triangle, 121:SellStock, 122: SellStockII, 123: SellStockIII, 124: MaxPath, 
             125: ValidPalindrome, 126: WordLadderII, 127: WordLadder, 128: LongestSeq, 129: SumLeaf,
+            130: SurroundedRegions, 131: PalindromePartition, 132: PalindromePartitionII, 133: CloneGraph, 134:GasStation, 135:Candies,
             200: NumberofIslands
         };
         const codes = Object.keys(tags).filter(v=>{             
