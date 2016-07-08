@@ -15,7 +15,7 @@
 
 import React from "react";
 import Template from "./Template";
-import TreeNode from "./TreeNode";
+import TreeNode from "./Node";
 /**
  * @param {TreeNode} root
  * @param {TreeNode} p

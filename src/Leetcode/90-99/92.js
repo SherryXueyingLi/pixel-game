@@ -1,5 +1,5 @@
 
-import ListNode from "../ListNode";
+import ListNode from "../Node";
 import React from "react";
 import Template from "../Template";
 

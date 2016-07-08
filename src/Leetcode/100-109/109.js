@@ -4,8 +4,8 @@
 
 import React from "react";
 import Template from "../Template";
-import ListNode from "../ListNode";
-import TreeNode from "../TreeNode";
+import ListNode from "../Node";
+import TreeNode from "../Node";
 
 /**
  * @param {ListNode} head

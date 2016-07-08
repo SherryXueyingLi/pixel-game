@@ -6,6 +6,7 @@ import * as Leetcode10  from "../Leetcode/100-109/index";
 import * as Leetcode11  from "../Leetcode/110-119/index";
 import * as Leetcode12  from "../Leetcode/120-129/index";
 import * as Leetcode13  from "../Leetcode/130-139/index";
+import * as Leetcode14  from "../Leetcode/140-149/index";
 
 
 import NumberofIslands  from "../Leetcode/200";
@@ -18,7 +19,7 @@ export default class Leetcode extends React.Component{
 
     generateTags(){
         let tags = {};
-        let imported = [Leetcode0, Leetcode10, Leetcode11, Leetcode12, Leetcode13];
+        let imported = [Leetcode0, Leetcode9, Leetcode10, Leetcode11, Leetcode12, Leetcode13, Leetcode14];
         for(let v in  imported){          
             for(let key in imported[v]){
                 let index = key.split("leetcode")[1];
