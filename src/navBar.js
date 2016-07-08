@@ -4,7 +4,7 @@ import {IndexLink, Link} from "react-router"
 export default class navigationBar extends React.Component {
     constructor(){
         super()
-        this.state = {collapsed: true, expand:{expanRelax: false, expandLeetcode: false}};
+        this.state = {collapsed: true, expand:{expanRelax: false, expandLeetcode: false, expandLeetcode0: false, expandLeetcode1: false, expandLeetcode2: false, expandLeetcode3: false}};
     }
 
     setExpand(val){ 
@@ -13,43 +13,67 @@ export default class navigationBar extends React.Component {
         return expand;
     }
 
+    toggleDropDown(dropDownKey){ 
+        let expand = this.setExpand(false);
+        for(let key in this.state.expand){
+            if(key === dropDownKey) expand[key] = !this.state.expand[key];
+        }
+        this.setState({expand});
+    }
+
     toggleCollapse(){
         const collapsed = !this.state.collapsed;     
         this.setState({collapsed, expand: this.setExpand(false)});
     }
 
-    toggleRelax(event){
-        let toggled = !this.state.expand.expanRelax;
+
+    closeAll(event){   
         let expand = this.setExpand(false);
-        expand.expanRelax = toggled;
         this.setState({expand});
-        event.stopPropagation();
     }
-    toggleLeetcode(event){
-        let toggled = !this.state.expand.expandLeetcode;
-        let expand = this.setExpand(false);
-        expand.expandLeetcode = toggled;
-        this.setState({expand});
-        event.stopPropagation();
+
+    getDropdownElements(begin){
+        const {pathname} = this.props.location;
+        if(begin === 0) begin="";
+        return Array.apply(null, Array(11)).map((v,i)=>{
+            let index = i<=4?i:i-1;
+            let path = `leetcode/${begin}${index}0`;
+            if(i===5) return <li class="divider" key={path}></li>;
+            let text = `${begin}${index}0-${begin}${index}9`;
+            if(begin==="" && i===0) text = '1-9';
+            return  <li class={pathname.endsWith(path)?"active":""} key={path+i}><Link to={path}>{text}</Link></li>;
+        });
     }
-    closeSubMenu(){
-        const collapsed = true;
-        this.setState({collapsed,expand: this.setExpand(false)});
+
+    generateLeetcodeDropDown(){
+        const {expand} = this.state;
+        const {pathname} = this.props.location;
+        return Array.apply(null, Array(4)).map((v,i)=>{
+             let key = "expandLeetcode"+i;
+             if(i===0) i="";
+             let regex = "/leetcode/"+i+"[0-9]{2}$";
+             let pattern =  new RegExp(regex,"g");
+             let text = i===""?"" : (i+"00");
+             return (<li className={"dropdown "+ (expand[key]?'open':'') + (pathname.match(pattern) ? " active" : "")} key={text}>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded={expand[key]} onClick={this.toggleDropDown.bind(this,key)}>Leetcode {text}<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" onClick={this.closeAll.bind(this)}>                  
+                               { this.getDropdownElements(i)}
+                            </ul>
+              </li>)
+        });
+
+
+        
     }
 
     render(){
-        const {location} = this.props;
+        const {pathname} = this.props.location;
         const {collapsed, expand} = this.state;
-        const {expanRelax, expandLeetcode} = expand;
-        const mainClass = location.pathname === "/" ? " active":"";
-        const snakeClass = location.pathname === "/snake" ? " active":"";
-        const othelloClass = location.pathname === "/othello" ? " active":"";
-        const leetcodeClass = location.pathname.match(/^\/leetcode/) ? " active" : "";;
+        const {expanRelax, expandLeetcode0, expandLeetcode1, expandLeetcode2, expandLeetcode3} = expand;
+        const snakeClass = pathname === "/snake" ? " active":"";
+        const othelloClass = pathname === "/othello" ? " active":"";
         const navClass = collapsed ? " collapse" : "";
         const collapsedClass = collapsed ? " collapsed" : "";
-        const openRelax = expanRelax ? " open":"";
-        const openLeetcode = expandLeetcode ? " open":"";
-
         return (
             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
              <div class="container">
@@ -63,33 +87,20 @@ export default class navigationBar extends React.Component {
                     <Link class="navbar-brand" to="/">Sherry's Study Site</Link>
                 </div>
                 <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav" onClick={this.closeSubMenu.bind(this)}>
-                        <li class={mainClass}>
+                    <ul class="nav navbar-nav">
+                        <li class={pathname === "/" ? " active":""}>
                             <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Main</IndexLink>
                         </li>
-                        <li class={"dropdown "+openLeetcode + leetcodeClass}>
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded={expandLeetcode} onClick={this.toggleLeetcode.bind(this)}>Leetcode <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu" onClick={this.toggleLeetcode.bind(this)}>
-                                <li><Link to="leetcode/1">1-10</Link></li>
-                                <li class="divider"></li>
-                                <li><Link to="leetcode/90">90-99</Link></li>
-                                <li><Link to="leetcode/100">100-109</Link></li>                              
-                                <li class="divider"></li>
-                                <li><Link to="leetcode/110">110-119</Link></li>  
-                                <li><Link to="leetcode/120">120-129</Link></li>  
-                                <li><Link to="leetcode/130">130-139</Link></li>  
-                                <li class="divider"></li>
-                                <li><Link to="leetcode/200">200-209</Link></li>    
-                            </ul>
-                        </li>
-                        <li class={"dropdown "+openRelax + snakeClass + othelloClass}>
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded={expanRelax} onClick={this.toggleRelax.bind(this)}>Relax <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu" onClick={this.toggleRelax.bind(this)}>
-                                <li class={snakeClass}><Link to="snake">Snake</Link></li>
-                                <li  class={othelloClass}><Link to="othello">Othello</Link></li>                              
+                         {this.generateLeetcodeDropDown()}
+                        <li class={"dropdown " + (expanRelax?"open":"") + (pathname.startsWith("relax")?" active":"")}>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded={expanRelax} onClick={this.toggleDropDown.bind(this,'expanRelax')}>Relax <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu" onClick={this.closeAll.bind(this)}>
+                                <li class={pathname.endsWith("relax/snake")?"active":""}><Link to="relax/snake">Snake</Link></li>
+                                <li class={pathname.endsWith("relax/othello")?"active":""}><Link to="relax/othello">Othello</Link></li>                              
                                 <li class="divider"></li>
                             </ul>
                         </li>
+                       
                     </ul>
                 </div>
              </div>

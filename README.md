@@ -14,8 +14,8 @@ check [Here](http://sherryxueyingli.github.io/pixel-game)
 + 100-109 Finished.
 + 110-119 Finished.
 + 120-129 126 & 127 left.
-+ 130-139 In progress
-+ 140-149
++ 130-139 Finished.
++ 140-149 In progress
 + 150-159
 + 160-169
 + 170-179

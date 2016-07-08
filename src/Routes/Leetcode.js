@@ -1,85 +1,38 @@
 import React from "react";
-import Subject1 from "../Leetcode/1-10/1";
-import Subject2 from "../Leetcode/1-10/2";
-import Subject3 from "../Leetcode/1-10/3";
-import Subject4 from "../Leetcode/1-10/4";
-import Subject5 from "../Leetcode/1-10/5";
+import * as Leetcode0  from "../Leetcode/1-9/index";
+import * as Leetcode9  from "../Leetcode/90-99/index";
 
-import SubsetII from "../Leetcode/90-99/90";
-import DecodeWays from "../Leetcode/90-99/91";
-import ReverseListII from "../Leetcode/90-99/92";
-import RestoreIPAddresses from "../Leetcode/90-99/93";
-import BinaryTreeInorder from "../Leetcode/90-99/94";
-import UniqueTreesII from "../Leetcode/90-99/95";
-import UniqueTrees from "../Leetcode/90-99/96";
-import Interleaving from "../Leetcode/90-99/97";
-import ValidateBSTree from "../Leetcode/90-99/98";
-import RecoverBST from "../Leetcode/90-99/99";
+import * as Leetcode10  from "../Leetcode/100-109/index";
+import * as Leetcode11  from "../Leetcode/110-119/index";
+import * as Leetcode12  from "../Leetcode/120-129/index";
+import * as Leetcode13  from "../Leetcode/130-139/index";
 
-import SameTree from "../Leetcode/100-109/100";
-import SymmetricTree from "../Leetcode/100-109/101";
-import LevelOrder from "../Leetcode/100-109/102";
-import ZigzagLevel from "../Leetcode/100-109/103";
-import TreeDepth from "../Leetcode/100-109/104";
-import ConsTreeFromPI from "../Leetcode/100-109/105";
-import ConsTreeFromPI2 from "../Leetcode/100-109/106";
-import LevelOrderII from "../Leetcode/100-109/107";
-import Array2BST from "../Leetcode/100-109/108";
-import List2BST from "../Leetcode/100-109/109";
-
-import BalancedBinaryTree from "../Leetcode/110-119/110";
-import MinDepth from "../Leetcode/110-119/111";
-import PathSum from "../Leetcode/110-119/112";
-import PathSumII from "../Leetcode/110-119/113";
-import FlattenBinaryTree from "../Leetcode/110-119/114";
-import DistinctSubsequences from "../Leetcode/110-119/115";
-import NextRightPointer from "../Leetcode/110-119/116";
-import NextRightPointerII from "../Leetcode/110-119/117";
-import PascalTriangle from "../Leetcode/110-119/118";
-import PascalTriangleII from "../Leetcode/110-119/119";
-
-import Triangle from "../Leetcode/120-129/120";
-import SellStock from "../Leetcode/120-129/121";
-import SellStockII from "../Leetcode/120-129/122";
-import SellStockIII from "../Leetcode/120-129/123";
-import MaxPath from "../Leetcode/120-129/124";
-import ValidPalindrome from "../Leetcode/120-129/125";
-import WordLadderII from "../Leetcode/120-129/126";
-import WordLadder from "../Leetcode/120-129/127";
-import LongestSeq from "../Leetcode/120-129/128";
-import SumLeaf from "../Leetcode/120-129/129";
-
-import SurroundedRegions from "../Leetcode/130-139/130";
-import PalindromePartition from "../Leetcode/130-139/131";
-import PalindromePartitionII from "../Leetcode/130-139/132";
-import CloneGraph from "../Leetcode/130-139/133";
-import GasStation from "../Leetcode/130-139/134";
-import Candies from "../Leetcode/130-139/135";
 
 import NumberofIslands  from "../Leetcode/200";
 
 export default class Leetcode extends React.Component{
     constructor(){
         super();
-        
+        this.tags = this.generateTags();
+    }
+
+    generateTags(){
+        let tags = {};
+        let imported = [Leetcode0, Leetcode10, Leetcode11, Leetcode12, Leetcode13];
+        for(let v in  imported){          
+            for(let key in imported[v]){
+                let index = key.split("leetcode")[1];
+                tags[index] =imported[v][key];
+            }
+        }
+        return tags;
     }
 
     render(){
         const { subjects } = this.props.params;
         
-        const tags = {
-            1: Subject1, 2: Subject2, 3: Subject3, 4: Subject4, 5: Subject5,
-            90: SubsetII, 91: DecodeWays, 92: ReverseListII, 93: RestoreIPAddresses, 94: BinaryTreeInorder, 95: UniqueTreesII, 96: UniqueTrees, 97: Interleaving,
-            98: ValidateBSTree, 99: RecoverBST,
-            100: SameTree, 101: SymmetricTree, 102: LevelOrder, 103: ZigzagLevel, 104: TreeDepth, 105: ConsTreeFromPI,
-            106: ConsTreeFromPI2, 107: LevelOrderII, 108: Array2BST, 109: List2BST,
-            110: BalancedBinaryTree, 111: MinDepth, 112: PathSum, 113: PathSumII, 114: FlattenBinaryTree,
-            115: DistinctSubsequences, 116: NextRightPointer, 117: NextRightPointerII, 118: PascalTriangle, 119: PascalTriangleII,
-            120: Triangle, 121:SellStock, 122: SellStockII, 123: SellStockIII, 124: MaxPath, 
-            125: ValidPalindrome, 126: WordLadderII, 127: WordLadder, 128: LongestSeq, 129: SumLeaf,
-            130: SurroundedRegions, 131: PalindromePartition, 132: PalindromePartitionII, 133: CloneGraph, 134:GasStation, 135:Candies,
-            200: NumberofIslands
-        };
+        const tags = this.tags;
+
         const codes = Object.keys(tags).filter(v=>{             
                     return +v>=+subjects && +v <(+subjects+10);}).map(key=>{
                         return React.createElement(tags[key], {id: `leetcode/${subjects}/${key}`, key})
