@@ -50,6 +50,6 @@ var longestPalindrome = function(s) {
 
     render(){
         const {code, explain, subject} = this.state;
-        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="" subject={subject}/>
+        return <Template code={code} explain={explain} title={ClassName.title()} id={this.props.id} difficulty="Medium" subject={subject}/>
     }
 }

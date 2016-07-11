@@ -3,3 +3,7 @@ export {default as leetcode2} from './2';
 export {default as leetcode3} from './3';
 export {default as leetcode4} from './4';
 export {default as leetcode5} from './5';
+export {default as leetcode6} from './6';
+export {default as leetcode7} from './7';
+export {default as leetcode8} from './8';
+export {default as leetcode9} from './9';
