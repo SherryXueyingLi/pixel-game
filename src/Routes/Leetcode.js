@@ -1,5 +1,6 @@
 import React from "react";
 import * as Leetcode0  from "../Leetcode/1-9/index";
+import * as Leetcode1  from "../Leetcode/10-19/index";
 import * as Leetcode9  from "../Leetcode/90-99/index";
 
 import * as Leetcode10  from "../Leetcode/100-109/index";
@@ -19,7 +20,7 @@ export default class Leetcode extends React.Component{
 
     generateTags(){
         let tags = {};
-        let imported = [Leetcode0, Leetcode9, Leetcode10, Leetcode11, Leetcode12, Leetcode13, Leetcode14];
+        let imported = [Leetcode0,Leetcode1, Leetcode9, Leetcode10, Leetcode11, Leetcode12, Leetcode13, Leetcode14];
         for(let v in  imported){          
             for(let key in imported[v]){
                 let index = key.split("leetcode")[1];
