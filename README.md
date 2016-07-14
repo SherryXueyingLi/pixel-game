@@ -9,16 +9,24 @@ check [Here](http://sherryxueyingli.github.io/pixel-game)
 
 ###Leetcode###
 
-+ 1-10 
++ 1-9     Finished
++ 10-19   10-12 done
 + 90-99   Finished.
+
 + 100-109 Finished.
 + 110-119 Finished.
-+ 120-129 126 & 127 left.
++ 120-129 126 left.
 + 130-139 Finished.
-+ 140-149 In progress
++ 140-149 140-142 done
 + 150-159
 + 160-169
 + 170-179
++ 180-189
++ 190-199
+
++ 200-209
++ 210-219
++ 220-229 220-221 done
 
 
 ##Games included
